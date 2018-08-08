@@ -1,16 +1,16 @@
 # Basic Volume Management
 
 ### Create a volume using pxctl
-`pxctl volume create --shared --size 2 testvol`
+`node01 $ pxctl volume create --shared --size 2 testvol`
 
 ### Check the volume exists
-`pxctl volume list`
+`node01 $ pxctl volume list`
 
 ### Inspect the volume
-`pxctl volume inspect testvol`
+`node01 $ pxctl volume inspect testvol`
 
 ### Get the nginx pod spec
-`curl -o nginx-pod.yaml https://gitlab.com/snippets/1721417/raw`
+`master $ curl -o nginx-pod.yaml https://gitlab.com/snippets/1721417/raw`
 
 ```yaml
 apiVersion: v1
@@ -33,13 +33,13 @@ spec:
 ```
 
 ### Apply the nginx pod spec
-`kubectl apply -f nginx-pod.yaml`
+`master $ kubectl apply -f nginx-pod.yaml`
 
 ### Check the pod is running
-`watch kubectl get pods -o wide -n default`
+`master $ watch kubectl get pods -o wide -n default`
 
 ### View the attached volume
-`pxctl volume list -a`
+`node01 $pxctl volume list -a`
 
 ### Verify volume in the pod
-`kubectl exec nginx -- df -h | grep px`
+`master $ kubectl exec nginx -- df -h | grep px`
