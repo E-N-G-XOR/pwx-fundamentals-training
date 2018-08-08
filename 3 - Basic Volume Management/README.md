@@ -10,7 +10,7 @@
 `node01 $ pxctl volume inspect testvol`
 
 ### Get the nginx pod spec
-`master $ curl -o nginx-pod.yaml https://gitlab.com/snippets/1721417/raw`
+`master $ curl -Lo nginx-pod.yaml https://git.io/fNSoJ`
 
 ```yaml
 apiVersion: v1
