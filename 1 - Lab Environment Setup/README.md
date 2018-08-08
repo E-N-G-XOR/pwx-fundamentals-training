@@ -1,3 +1,5 @@
+# Lab Environment Setup
+
 ### Check the etcd container is running
 `docker container ls -a | grep etcd`
 
