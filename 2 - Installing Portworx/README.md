@@ -1,4 +1,4 @@
-# Installing Portworc
+# Installing Portworx
 
 ### Portworx spec generator
 https://install.portworx.com/1.4/
