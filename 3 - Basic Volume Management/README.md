@@ -1,10 +1,10 @@
+# Basic Volume Management
+
 ### Create a volume using pxctl
 `pxctl volume create --shared --size 2 testvol`
 
 ### Check the volume exists
 `pxctl volume list`
-
-# Basic Volume Management
 
 ### Inspect the volume
 `pxctl volume inspect testvol`
