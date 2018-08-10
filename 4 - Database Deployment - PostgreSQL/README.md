@@ -160,5 +160,3 @@ pxdemo=# exit
 ```
 # exit
 ```
-
-
