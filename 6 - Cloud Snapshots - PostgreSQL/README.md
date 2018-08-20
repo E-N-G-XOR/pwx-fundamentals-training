@@ -24,8 +24,8 @@
 ### Create secrets store credentials
 ```bash
 node01 $ pxctl credentials create --provider s3 \
---s3-access-key X0IK2K7XPFQ5UWWXN5YY \
---s3-secret-key 5gytOkRYf46zQZ2J9XcO7xJdqQLhiWUEYmIhKfHq \
+--s3-access-key <access key> \
+--s3-secret-key <secret key> \
 --s3-region us-east-1 \
 --s3-endpoint node01:9010 \
 --s3-disable-ssl
@@ -40,7 +40,7 @@ node01 $ pxctl credentials create --provider s3 \
 `node01 $ pxctl volume list`
 
 ### Backup this snapshot to the ObjectStore
-`node01 $ pxctl cloudsnap backup 944766022210045359`
+`node01 $ pxctl cloudsnap backup <snapshot volume ID>`
 
 ### Check the backup completes
 `node01 $ pxctl cloudsnap status`
@@ -49,5 +49,5 @@ node01 $ pxctl credentials create --provider s3 \
 `node01 $ pxctl cloudsnap list`
 
 ### Restore the snapshot
-`node01 $ pxctl cloudsnap restore --snap 181112018587037740-545317760526242886`
+`node01 $ pxctl cloudsnap restore --snap <snap ID>`
 
