@@ -2,7 +2,7 @@
 
 1. Get in pairs!
 2. Create a Storage Class and PVC for Redis on one cluster (repl 1)
-3. Deploy Redis - https://gitlab.com/snippets/1728241/raw 
+3. Deploy Redis - https://git.io/fAJ9n 
 4. Populate the database with some sample data
 5. Resize the data volume
 6. Scale the HA value to 3
