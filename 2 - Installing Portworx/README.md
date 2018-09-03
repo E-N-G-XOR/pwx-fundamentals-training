@@ -22,3 +22,6 @@ master $ kubectl apply -f 'https://install.portworx.com/1.5?kbver=1.9.10&b=true&
 
 ### Check Portworx pods are running
 `master $ watch kubectl get pods -n kube-system -l name=portworx -o wide`
+
+### View the config file
+`node01 $ cat /etc/pwx/config.json`
