@@ -1,22 +1,23 @@
 # Installing Portworx
 
 ### Portworx spec generator
-https://install.portworx.com/1.4/
+https://install.portworx.com/1.5/
 
 ### Values for the install generator
 
-| Item               | Value                 |
-| -------------------|:---------------------:|
-| Cluster Name       | px-demo               |
-| Key Value Store    | etcd://master:4001    |
-| Kubernetes Version | 1.10.0                |
-| List of drives     | /dev/sdb              |
-| Enable Stork       | Yes                   |
-| Secrets type       | Kubernetes            |
+| Item                         | Value                 |
+| -----------------------------|:---------------------:|
+| Kubernetes Version           | 1.9.10                |
+| ETCD                         | Built In (Beta)       |
+| Storage (existing)           | /dev/sdb              |
+| Data and Mngmt interface     | ens3                  |
+| Enable Stork                 | Yes                   |
+| Secrets type                 | Kubernetes            |
+| Cluster name                 | px-demo               |
 
 ### Generated command
 ```
-master $ kubectl apply -f 'http://install.portworx.com/1.4/?k=etcd://master:4001&kbver=1.10.0&c=px-demo-551f1e41-ab39-4400-ba2d-e493ef6e7790&s=/dev/sdb&st=k8s&stork=true'
+master $ kubectl apply -f 'kubectl apply -f 'https://install.portworx.com/1.5?kbver=1.9.10&b=true&s=%2Fdev%2Fsdb&m=ens3&d=ens3&c=px-demo&stork=true&st=k8s'
 ```
 
 ### Check Portworx pods are running
