@@ -1,10 +1,16 @@
 # Lab Environment Setup
 
-### Check the etcd container is running
-`master $ docker container ls -a | grep etcd`
+### SSH from your workstation to the master node
+`ssh root@master-<machine ID>.srv.ravcloud.com`
 
-### Check the etcd endpoint is accessible from a worker node
-```bash
-master $ ssh root@node01 curl -s http://master:4001/version
-{"etcdserver":"3.3.4","etcdcluster":"3.3.0"}
-```
+### Check the cluster nodes
+`kubectl get nodes`
+
+### SSH to another node
+`ssh node01`
+
+### View worker node storage
+`lsblk`
+
+### Clone this repo!
+`git clone https://github.com/grdnrio/pwx-fundamentals-training.git`
