@@ -10,7 +10,7 @@
 `master $ kubectl get sc`
 
 ### Retrieve the Postgres Persistent Volume Claim
-`master $ curl -Lo px-postgres-pvc.yaml https://git.io/fNSoE`
+`master $ curl -Lo px-postgres-pvc.yaml https://git.io/fNSoP`
 
 ### Apply the spec
 `master $ kubectl apply -f px-postgres-pvc.yaml`
@@ -70,7 +70,7 @@ spec:
 `master $ watch kubectl get pods`
 
 ### Store the pod ID
-`POD=postgres-584bb46dd4-g6lr8`
+`POD=<pod ID>`
 
 ### Exec into the Postgres pod
 `master $ kubectl exec -it $POD bash`
@@ -96,7 +96,7 @@ postgres=# \q
 ```
 
 ### Run pgbench
-`pgbench -i -s 40 pxdemo;`
+`pgbench -i -s 50 pxdemo;`
 
 ### Verify data
 ```
