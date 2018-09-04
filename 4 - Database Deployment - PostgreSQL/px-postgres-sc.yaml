@@ -5,6 +5,6 @@ metadata:
   name: px-postgres-sc
 provisioner: kubernetes.io/portworx-volume
 parameters:
-  repl: "2"
+  repl: "3"
   io_profile: "db"
   priority_io: "high"
