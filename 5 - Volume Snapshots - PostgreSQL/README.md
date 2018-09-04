@@ -20,11 +20,14 @@ exit
 exit
 ```
 
-### Delete the postgres pod and verify
+### Scale down the postgres deployment and verify
 ```bash
-master $ kubectl delete -f px-postgres-app.yaml
+master $ kubectl scale --replicas=0 deployment/postgres
 master $ kubectl get pods
 ```
+
+### Get the snap and volume IDs
+`pxctl v l`
 
 ### Restore to the original PVC with the CLI
 `node01 $ pxctl volume restore -s <snap ID> <volume ID>`
