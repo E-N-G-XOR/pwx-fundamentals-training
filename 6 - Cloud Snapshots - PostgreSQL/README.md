@@ -10,7 +10,7 @@
 `node01 $ pxctl volume list`
 
 ### Start the ObjectStore
-`sudo pxctl objectstore start`
+`node01 sudo pxctl objectstore start`
 
 ### Check ObjectStore status
 `node01 $ pxctl objectstore status`
