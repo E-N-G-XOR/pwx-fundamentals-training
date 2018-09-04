@@ -45,6 +45,10 @@ node01 $ pxctl credentials create --provider s3 \
 ### Check the backup completes
 `node01 $ pxctl cloudsnap status`
 
+### Delete the local snapshot
+`node01 $ pxctl volume list`
+`node01 $ pxctl volume delete <snapshot volume ID>`
+
 ### Retrieve the cloudsnap ID
 `node01 $ pxctl cloudsnap list`
 
