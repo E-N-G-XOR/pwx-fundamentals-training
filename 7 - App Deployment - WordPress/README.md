@@ -27,4 +27,4 @@
 `master $ kubectl exec <pod> -- curl -o wp-content/themes/twentyfifteen/header.php https://git.io/fAfod`
 
 ### Scale WordPress deployment
-`master $ kubectl scale --replicas=5 deployment/wordpress`
+`master $ kubectl scale --replicas=15 deployment/wordpress`
