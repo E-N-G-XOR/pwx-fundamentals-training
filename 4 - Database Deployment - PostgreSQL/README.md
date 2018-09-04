@@ -98,6 +98,9 @@ postgres=# \q
 ### Run pgbench
 `pgbench -i -s 50 pxdemo;`
 
+### Watch data being written
+`node01 $ watch pxctl v i <volume ID>`
+
 ### Verify data
 ```
 psql pxdemo
