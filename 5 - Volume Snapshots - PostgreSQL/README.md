@@ -20,6 +20,32 @@ exit
 exit
 ```
 
+### Delete the postgres pod and verify
+```bash
+master $ kubectl delete -f px-postgres-app.yaml
+master $ kubectl get pods
+```
+
+### Restore to the original PVC with the CLI
+`node01 $ pxctl volume restore -s <snap ID> <volume ID>`
+
+### Verify data
+`master $ kubectl exec -it <postgres-pod> bash`
+
+```bash
+$ su -s /bin/bash postgres
+psql pxdemo
+
+\dt
+
+select count(*) from pgbench_accounts;
+
+ count  
+---------
+ 5000000
+(1 row)
+```
+
 ### Curl the restore spec
 `master $ curl -Lo px-snap-pvc.yaml https://git.io/fAfTf`
 
