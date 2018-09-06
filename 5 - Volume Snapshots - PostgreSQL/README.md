@@ -27,7 +27,7 @@ master $ kubectl get pods
 ```
 
 ### Get the snap and volume IDs
-`pxctl v l`
+`node01 $ pxctl v l`
 
 ### Restore to the original PVC with the CLI
 `node01 $ pxctl volume restore -s <snap ID> <volume ID>`
@@ -65,7 +65,7 @@ select count(*) from pgbench_accounts;
 `master $ kubectl apply -f postgres-app-restore.yaml`
 
 ### Wait for the pod to come up
-`watch kubectl get pods`
+`master $ watch kubectl get pods`
 
 ### Check the data is restored
 `master $ kubectl exec -it postgres-snap-<id> bash`
