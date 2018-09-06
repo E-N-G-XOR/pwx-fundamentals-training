@@ -10,7 +10,7 @@
 `node01 $ pxctl volume list`
 
 ### Start the ObjectStore
-`node01 sudo pxctl objectstore start`
+`node01 $ sudo pxctl objectstore start`
 
 ### Check ObjectStore status
 `node01 $ pxctl objectstore status`
@@ -19,7 +19,7 @@
 `node01 $ pxctl secrets`
 
 ### Login to K8s secrets
-`pxctl secrets k8s login`
+`node01 $ pxctl secrets k8s login`
 
 ### Create secrets store credentials
 ```bash
