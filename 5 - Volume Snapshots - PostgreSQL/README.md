@@ -32,6 +32,12 @@ master $ kubectl get pods
 ### Restore to the original PVC with the CLI
 `node01 $ pxctl volume restore -s <snap ID> <volume ID>`
 
+### Scale the deployment back up to 1
+```bash
+master $ kubectl scale --replicas=1 deployment/postgres
+master $ kubectl get pods
+```
+
 ### Verify data
 `master $ kubectl exec -it <postgres-pod> bash`
 
