@@ -39,7 +39,7 @@ spec:
 `master $ watch kubectl get pods -o wide -n default`
 
 ### View the attached volume
-`node01 $pxctl volume list -a`
+`node01 $ pxctl volume list -a`
 
 ### Verify volume in the pod
 `master $ kubectl exec nginx -- df -h | grep px`
