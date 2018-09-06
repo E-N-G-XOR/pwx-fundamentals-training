@@ -4,7 +4,7 @@
 `master $ curl -Lo px-snap.yaml https://git.io/fAfJE`
 
 ### Apple the spec
-`kubectl create -f px-snap.yaml`
+`master $ kubectl create -f px-snap.yaml`
 
 ### Drop the Postgres database
 Exec into the pod
