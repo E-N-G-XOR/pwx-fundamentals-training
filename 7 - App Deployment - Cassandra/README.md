@@ -79,12 +79,14 @@ DROP TABLE IF EXISTS portworx.features;
 `master $ watch kubectl get pods`
 
 ### Shell into a Portworx container
-`master $ PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}') kubectl exec -n kube-system -it $PX_POD bash`
+```
+master $ PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}') 
+master $ kubectl exec -n kube-system -it $PX_POD bash
+```
 
 ### Clone and restore volumes with the same name from snapshots
 ```bash
-for pvc in /opt/pwx/bin/pxctl v l | grep group | awk '{print $2}'; 
-do /opt/pwx/bin/pxctl v d ${pvc:24:100} -f; /opt/pwx/bin/pxctl v clone --name ${pvc:24:100} $pvc; done exit
+for pvc in /opt/pwx/bin/pxctl v l | grep group | awk '{print $2}'; do /opt/pwx/bin/pxctl v d ${pvc:24:100} -f; /opt/pwx/bin/pxctl v clone --name ${pvc:24:100} $pvc; done exit
 ```
 
 ### Scale the Cassandra StatefulSet back up to 3
