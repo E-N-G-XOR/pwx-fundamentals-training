@@ -14,11 +14,10 @@ https://install.portworx.com/1.5/
 | Enable Stork                 | Yes                   |
 | Secrets type                 | Kubernetes            |
 | Cluster name                 | px-demo               |
-| Pull Policy                  | If Not Present        |
 
 ### Generated command
 ```
-master $ kubectl apply -f 'https://install.portworx.com/1.5?kbver=1.9.10&b=true&s=%2Fdev%2Fsdb&m=ens3&d=ens3&c=px-demo&stork=true&st=k8s&pp=if'
+master $ kubectl apply -f 'https://install.portworx.com/1.5?kbver=1.9.10&b=true&s=%2Fdev%2Fsdb&m=ens3&d=ens3&c=px-demo&stork=true&st=k8s'
 ```
 
 ### Check Portworx pods are running
