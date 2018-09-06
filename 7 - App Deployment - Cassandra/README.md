@@ -52,7 +52,7 @@ INSERT INTO portworx.features (id, name, value) VALUES ('px-5', 'DevOps', 'your 
 `master $ watch kubectl get pods -o wide`
 
 ### Retrieve the Cassandra StatefulSet snapshot yaml
-`master $ curl -Lo px-cassandra-ss.yaml https://git.io/fABY9`
+`master $ curl -Lo px-cassandra-snap.yaml https://git.io/fAE2e`
 
 ### Apply the snapshot yaml
 `master $ kubectl create -f px-cassandra-snap.yaml`
