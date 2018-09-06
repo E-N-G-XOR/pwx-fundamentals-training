@@ -14,7 +14,7 @@ https://install.portworx.com/1.5/
 | Enable Stork                 | Yes                   |
 | Secrets type                 | Kubernetes            |
 | Cluster name                 | px-demo               |
-| Pull Policy                  | Never                 |
+| Pull Policy                  | If Not Present        |
 
 ### Generated command
 ```
