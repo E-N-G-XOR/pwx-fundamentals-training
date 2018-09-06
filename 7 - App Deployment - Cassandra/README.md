@@ -4,7 +4,7 @@
 `master $ curl -Lo px-cassandra-sc.yaml https://git.io/fABOR`
 
 ### View the SC
-`cat px-cassandra-sc.yaml`
+`master $ cat px-cassandra-sc.yaml`
 
 ### Apple the Storage Class
 `master $ kubectl create -f px-cassandra-sc.yaml`
@@ -76,7 +76,7 @@ INSERT INTO portworx.features (id, name, value) VALUES ('px-5', 'DevOps', 'your 
 `master $ watch kubectl get pods`
 
 ### Shell into a Portworx container
-`PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}') kubectl exec -n kube-system -it $PX_POD bash`
+`master $ PX_POD=$(kubectl get pods -l name=portworx -n kube-system -o jsonpath='{.items[0].metadata.name}') kubectl exec -n kube-system -it $PX_POD bash`
 
 ### Clone and restore volumes with the same name from snapshots
 ```bash
@@ -91,7 +91,7 @@ do /opt/pwx/bin/pxctl v d ${pvc:24:100} -f; /opt/pwx/bin/pxctl v clone --name ${
 `master $ watch kubectl get pods`
 
 ### Start a csql shell
-`kubectl exec -it cqlsh -- cqlsh cassandra-0.cassandra.default.svc.cluster.local --cqlversion=3.4.4`
+`master $ kubectl exec -it cqlsh -- cqlsh cassandra-0.cassandra.default.svc.cluster.local --cqlversion=3.4.4`
 
 ### Check our table is there
 `SELECT id, name, value FROM portworx.features;`
