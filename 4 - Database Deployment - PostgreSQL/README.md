@@ -10,7 +10,7 @@
 `master $ kubectl get sc`
 
 ### Retrieve the Postgres Persistent Volume Claim
-`master $ curl -Lo px-postgres-pvc.yaml https://git.io/fNSoP`
+`master $ curl -Lo px-postgres-pvc.yaml https://git.io/fA4g2`
 
 ### Apply the spec
 `master $ kubectl apply -f px-postgres-pvc.yaml`
