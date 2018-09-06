@@ -3,7 +3,7 @@
 ### Curl the snapshot spec
 `master $ curl -Lo px-snap.yaml https://git.io/fAfJE`
 
-### Apple the spec
+### Apply the spec
 `master $ kubectl create -f px-snap.yaml`
 
 ### Drop the Postgres database
