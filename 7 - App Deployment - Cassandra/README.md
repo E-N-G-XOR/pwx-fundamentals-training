@@ -61,7 +61,10 @@ INSERT INTO portworx.features (id, name, value) VALUES ('px-5', 'DevOps', 'your 
 `master $ kubectl get volumesnapshot,volumesnapshotdatas`
 
 ### Drop the Portworx Features table
-`master $ kubectl exec -it cqlsh -- cqlsh cassandra-0.cassandra.default.svc.cluster.local --cqlversion=3.4.4 DROP TABLE IF EXISTS portworx.features; SELECT id, name, value FROM portworx.features;`
+```
+master $ kubectl exec -it cqlsh -- cqlsh cassandra-0.cassandra.default.svc.cluster.local --cqlversion=3.4.4 
+DROP TABLE IF EXISTS portworx.features; 
+```
 
 ### Verify it's deleted
 `SELECT id, name, value FROM portworx.features;`
